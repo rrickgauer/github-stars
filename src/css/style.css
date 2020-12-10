@@ -1,0 +1,24 @@
+
+body {
+    /*background-color: hsl(0, 0%, 97%);*/
+}
+
+#repos li {
+    /*background-color: hsl(0, 0%, 97%);*/
+}
+
+#repos li .bottom-row {
+    display: flex;
+}
+
+#repos li .bottom-row div {
+    margin-right: 30px;
+}
+
+
+#repos li .description {
+    color: rgb(88, 96, 105);
+    margin: 20px 0px;
+}
+
+
