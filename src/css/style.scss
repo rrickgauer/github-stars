@@ -1,0 +1,49 @@
+$color-white: hsl(0, 0%, 97%);
+$custom-font: 'PT Serif', serif;
+$color-green: #16DB93;
+
+
+.custom-font {
+	font-family: $custom-font;
+}
+
+.color-green {
+	color: $color-green;
+}
+
+
+body,
+.repo {
+	// background-color: $color-white;
+}
+
+.toolbar {
+	padding: 0px 20px;
+}
+
+
+.repo {
+	padding: 20px !important;
+	font-family: $custom-font;
+
+	h3 a {
+		color: $color-green;
+	}
+
+	.bottom-row {
+	    display: flex;
+	}
+
+	.bottom-row div {
+	    margin-right: 30px;
+	}
+
+	.description {
+	    color: rgb(88, 96, 105);
+	    margin: 20px 0px;
+	}
+}
+
+
+
+
