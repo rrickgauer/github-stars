@@ -1,24 +1,31 @@
-
-body {
-    /*background-color: hsl(0, 0%, 97%);*/
+.custom-font {
+  font-family: "PT Serif", serif;
 }
 
-#repos li {
-    /*background-color: hsl(0, 0%, 97%);*/
+.color-green {
+  color: #16DB93;
 }
 
-#repos li .bottom-row {
-    display: flex;
+.toolbar {
+  padding: 0px 20px;
 }
 
-#repos li .bottom-row div {
-    margin-right: 30px;
+.repo {
+  padding: 20px !important;
+  font-family: "PT Serif", serif;
+}
+.repo h3 a {
+  color: #16DB93;
+}
+.repo .bottom-row {
+  display: flex;
+}
+.repo .bottom-row div {
+  margin-right: 30px;
+}
+.repo .description {
+  color: #586069;
+  margin: 20px 0px;
 }
 
-
-#repos li .description {
-    color: rgb(88, 96, 105);
-    margin: 20px 0px;
-}
-
-
+/*# sourceMappingURL=style.css.map */

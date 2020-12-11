@@ -1,7 +1,5 @@
-
-
 const API = 'https://api.github.com/users/rrickgauer/starred?per_page=100';  
-const token = '39557f5f8a4cfcdea0bb8af00277de3bed940994';
+const token = '5fa26390bb8bbe4cfb3076cbb5c3f7112f125974';
 
 const searchInput = $('#search-input');
 const filterSelect = $('.filter-select');
