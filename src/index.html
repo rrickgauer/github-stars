@@ -23,18 +23,23 @@
             <a href="https://www.ryanrickgauer.com/resume/index.html" class="text-center color-green">Ryan Rickgauer</a>
         </div>
 
-        <div class="toolbar d-flex justify-content-between mb-3">
-            <div>
-                <div class="input-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class='bx bx-search'></i></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Search repos..." id="search-input" disabled>
-                </div>
+        <div class="input-group input-group-lg repo-search my-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class='bx bx-search'></i></span>
             </div>
-    
-            <div class="d-flex">
+            <input type="text" class="form-control" placeholder="Search repos..." id="search-input" disabled autocomplete="off">
+        </div> 
 
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+                <h4 class="num-stars"></h4>
+
+            </div>
+            
+
+            <div class="d-flex mb-3">
                 <!-- filter items -->
                 <div class="filter d-flex align-items-center mr-4">
                     <b>Filter:</b>
@@ -52,10 +57,12 @@
                         <option value="owner">Owner</option>
                     </select>
                 </div>
-
-            </div>            
-
+            </div> 
         </div>
+
+
+
+  
 
 
 
@@ -66,7 +73,7 @@
         </div>
 
 
-        <ul class="list-group list-group-flush" id="repos"></ul>
+        <ul class="list-group" id="repos"></ul>
 
 
     </div>
@@ -80,6 +87,7 @@
     <!-- bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <!-- main js -->
+    <script src="js/_token.js"></script>
     <script src="js/card.js"></script>
     <script src="js/index.js"></script>
 </body>
