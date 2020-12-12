@@ -6,6 +6,10 @@
   color: #16DB93;
 }
 
+body {
+  background-color: #f7f7f7;
+}
+
 .toolbar {
   padding: 0px 20px;
 }
@@ -26,6 +30,26 @@
 .repo .description {
   color: #586069;
   margin: 20px 0px;
+}
+
+.repo-search {
+  border: 1px solid lightgrey;
+}
+.repo-search.active {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: #80bdff;
+}
+.repo-search .input-group-prepend .input-group-text {
+  background-color: white;
+  border: none;
+  padding-right: 0;
+}
+.repo-search #search-input {
+  border: none;
+  box-shadow: none;
+}
+.repo-search #search-input:disabled {
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 const API = 'https://api.github.com/users/rrickgauer/starred?per_page=100';  
-const token = '5fa26390bb8bbe4cfb3076cbb5c3f7112f125974';
+
 
 const searchInput = $('#search-input');
 const filterSelect = $('.filter-select');
@@ -15,19 +15,40 @@ let languagesUniqueList = [];
 // main
 $(document).ready(function() {
     getData(API, console.log, console.log, getLinks);
-
     filterRepos();
     sortRepos();
     searchRepos();
+    activateSearchBar();
 
 });
+
+
+
+function activateSearchBar() {
+
+    $(searchInput).on('focus', function() {
+        $('.repo-search').addClass('active');
+    });
+
+    $(searchInput).on('focusout', function() {
+        $('.repo-search').removeClass('active');
+    });
+}
+
+
+
+
+
+
+
+
 
 function getData(url, actionResponse, actionSuccess, actionXhr) {
     $.ajax({
         url: url,
         headers: {
             // 'Authorization':'Basic xxxxxxxxxxxxx',
-            'Authorization': 'token ' + token,
+            'Authorization': 'token ' + GH_TOKEN,
         },
         method: 'GET',
         dataType: 'json',
@@ -74,6 +95,7 @@ function getLinks(xhr) {
         }
 
         displayRepos();
+        getNumStars();
     });
 }
 
@@ -228,6 +250,16 @@ function filterRepos() {
 
 
 
+function getNumStars() {
+
+    const numStars = $('.repo').length;
+
+    const display = numStars + ' stars';
+
+    $('.num-stars').text(display);
+
+
+}
 
 
 

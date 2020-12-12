@@ -12,9 +12,8 @@ $color-green: #16DB93;
 }
 
 
-body,
-.repo {
-	// background-color: $color-white;
+body {
+	background-color: $color-white;
 }
 
 .toolbar {
@@ -26,24 +25,53 @@ body,
 	padding: 20px !important;
 	font-family: $custom-font;
 
+
 	h3 a {
 		color: $color-green;
 	}
 
 	.bottom-row {
-	    display: flex;
+		display: flex;
 	}
 
 	.bottom-row div {
-	    margin-right: 30px;
+		margin-right: 30px;
 	}
 
 	.description {
-	    color: rgb(88, 96, 105);
-	    margin: 20px 0px;
+		color: rgb(88, 96, 105);
+		margin: 20px 0px;
 	}
 }
 
 
+
+.repo-search {
+	border: 1px solid lightgrey;
+
+	&.active {
+		box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+		border-color: #80bdff;
+	}
+
+	.input-group-prepend {
+		.input-group-text {
+			background-color: white;
+			border: none;
+			padding-right: 0;
+		}
+	}
+
+
+	#search-input {
+		border: none;
+		box-shadow: none;
+	}
+
+	#search-input:disabled {
+		background-color: white;
+	}
+
+}
 
 
