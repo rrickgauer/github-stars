@@ -35,9 +35,7 @@ function getData(url, actionResponse, actionSuccess, actionXhr) {
 
             if (actionResponse != undefined) {
                 actionResponse(response); 
-            } else {
-                console.log(response);
-            }
+            }   
 
             if (actionSuccess != undefined) {
                 actionResponse(success); 
@@ -71,12 +69,9 @@ function getLinks(xhr) {
     }
 
     $(document).ajaxStop(function() {
-
         for (let count = 0; count < starsData.length; count++) {
             starsData[count].listIndex = count;
         }
-
-        console.log(starsData);
 
         displayRepos();
     });
