@@ -29,6 +29,10 @@ Card.prototype.getHtml = function() {
         <h3><a target="_blank" href="${this.owner_html_url}">${this.owner_name}</a> / <a target="_blank" href="${this.html_url}">${this.name}</a></h3>
         <p class="description">${this.description}</p>
 
+
+        <div class="search-blank d-none">${name} ${ownerName}</div>
+
+
         <div class="bottom-row">
             <div class="forks"><i class='bx bx-git-repo-forked'></i> ${this.forks.toLocaleString()}</div>
             <div class="stars"><i class='bx bx-star'></i> ${this.stars.toLocaleString()}</div>
