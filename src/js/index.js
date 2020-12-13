@@ -36,13 +36,6 @@ function activateSearchBar() {
 }
 
 
-
-
-
-
-
-
-
 function getData(url, actionResponse, actionSuccess, actionXhr) {
     $.ajax({
         url: url,
@@ -156,7 +149,7 @@ function enableAllInputs() {
 
 function searchRepos() {
     $(searchInput).on('keyup', function() {
-        const value = $(this).val();
+        const value = $(this).val().toUpperCase();
 
         if (value == '') {
             $('.repo').removeClass('d-none');
@@ -164,8 +157,7 @@ function searchRepos() {
         }
 
         $('.repo').addClass('d-none');
-        $(`.repo:contains(${value})`).removeClass('d-none');
-
+        $(`.repo .search-blank:contains(${value})`).closest('.repo').removeClass('d-none');
     });
 }
 
@@ -247,18 +239,11 @@ function filterRepos() {
     });
 }
 
-
-
-
 function getNumStars() {
-
     const numStars = $('.repo').length;
-
     const display = numStars + ' stars';
 
     $('.num-stars').text(display);
-
-
 }
 
 

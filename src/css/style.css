@@ -32,6 +32,12 @@ body {
   margin: 20px 0px;
 }
 
+@media screen and (max-width: 668px) {
+  .repo h3 a {
+    word-break: break-word;
+    text-overflow: ellipsis;
+  }
+}
 .repo-search {
   border: 1px solid lightgrey;
 }
@@ -50,6 +56,38 @@ body {
 }
 .repo-search #search-input:disabled {
   background-color: white;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.toolbar .toolbar-inputs {
+  display: flex;
+  align-items: center;
+}
+.toolbar .toolbar-inputs .filter {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 668px) {
+  .toolbar {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
+
+  .toolbar-inputs {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .toolbar-inputs .filter,
+.toolbar-inputs .sort {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
