@@ -12,7 +12,6 @@ function Card(parms) {
 }
 
 
-
 Card.prototype.getHtml = function() {
 
     let badge = '';
